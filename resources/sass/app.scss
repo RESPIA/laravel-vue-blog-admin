@@ -1,0 +1,50 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~admin-lte/dist/css/adminlte.css';
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import '~simplemde/dist/simplemde.min.css';
+
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+
+.content-wrapper > .content {
+  padding: 0;
+}
+
+.card-tools a{
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.ml-3 .input-group.input-group-sm {
+  margin-left: -16px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 56%;
+}
+
+.card-header > .card-tools {
+  position: absolute;
+  right: 1rem;
+  top: 12px;
+}
