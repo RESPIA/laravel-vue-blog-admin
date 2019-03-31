@@ -1,0 +1,101 @@
+step 1 : 
+	+ npm install admin-lte@v3.0.0-alpha.2 --save
+step 2 : 
+	+ create admin folder, master.blade.php on folder
+step 3 : 
+	+ copy file index from admin lte template
+		+ add file css, js
+			<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+			<script src="{{ asset('js/app.js') }}" defer></script>
+step 4 : 
+	+In resourse js/bootstrap.js add code below
+		require('admin-lte');
+
+	+ In resourse sass/app.sass
+		@import '~admin-lte/dist/css/adminlte';
+step 5 [options] : create assets folder in public copy image logo, using asset(".../../logo.png")
+
+
+Step 6 : + Make Model,Category,Relationship db, craete seeder
+
+Step 7 : Install vue Route
+
+	+ https://router.vuejs.org/
+
+	+ cmd : npm install vue-router
+	
+	+ in resourse / js / app.js => add code below to app.js
+
+		import Vue from 'vue'
+		import VueRouter from 'vue-router'
+		Vue.use(VueRouter)
+
+// step 8
+https://router.vuejs.org/installation.html#direct-download-cdn
+https://router.vuejs.org/guide/
+
+[option]
++ reading more [mode history]
++ node : https://router.vuejs.org/guide/essentials/history-mode.html
+ 
+
+// step 9	List category design ( List | Edit | Delete )
+
+// step 10  	install v-form vuejs
+	
+	+ https://github.com/cretueusebiu/vform
+
+	+ add to app.js code below
+
+	//import Vue from 'vue'
+	import { Form, HasError, AlertError } from 'vform'
+
+	Vue.component(HasError.name, HasError)
+	Vue.component(AlertError.name, AlertError)
+
+
+// step 11 seet alert 2
+	+ add to app.js code below
+
+	// ES6 Modules or TypeScript
+	import Swal from 'sweetalert2'
+	const Swal = require('sweetalert2')
+
+	2. Call the sweetAlert2-function after the page has loaded
+
+	Swal.fire({
+  		title: 'Error!',
+  		text: 'Do you want to continue',
+  		type: 'error',
+  		confirmButtonText: 'Cool'
+	})
+
+// step 12 (setup vuex )
+	
+	+ add to app.js code below (top file)
+	npm install vuex --save
+
+	//import Vue from 'vue'
+	import Vuex from 'vuex'
+
+	Vue.use(Vuex)
+
+	+ create index file in folder store
+
+	+ add to app.js code below (Vue.use(Vuex)
+
+	import storeData from "./store/index"
+	
+	// store vuex
+	store = new Vuex.Store(
+	    storeData
+	)
+
+	+ register store to application
+	
+	const app = new Vue({
+	    el: "#app",
+	    router,
+	    // store vuex
+	    store
+	})
